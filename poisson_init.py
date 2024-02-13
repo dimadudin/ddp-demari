@@ -17,6 +17,6 @@ b[1:dn] = np.ones(dn - 1)
 b[-1] = 0
 
 d = np.zeros(dn)
-d[0] = (dx ** 2) * psi_o
+d[0] = psi_o
 d[1:dn] = (dx ** 2) * (n[1:dn] - p[1:dn] - N[1:dn])
-d[-1] = (dx ** 2) * psi_l
+d[-1] = psi_l
