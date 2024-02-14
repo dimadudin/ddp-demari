@@ -1,3 +1,4 @@
+import matplotlib.pyplot as plt
 import numpy as np
 
 def solve_system(dn, a, c, b, d):
@@ -21,3 +22,12 @@ def solve_system(dn, a, c, b, d):
 
 def calculate_integral(y, dx):
     return dx/3 * (y[0] + 4 * np.sum(y[1:-1:2]) + 2 * np.sum(y[2:-1:2]) + y[-1])
+
+def save_plot(x, y, y_label, fname):
+    plt.figure()
+    plt.plot(x, y)
+    plt.xlabel('x')
+    plt.ylabel(y_label)
+    plt.grid(True)
+    plt.savefig(fname)
+    plt.close()

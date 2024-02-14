@@ -22,4 +22,4 @@ psi_bi = np.log(Nd * Na / (ni ** 2))
 # border conditions
 n_o, n_l = Nd, 0
 p_o, p_l = 0, Na
-psi_o, psi_l = psi_bi, 0
+psi_o, psi_l = psi_bi - 22, 0
