@@ -1,6 +1,6 @@
 import numpy as np
 
-def sys_solve(dn, a, c, b, d):
+def solve_system(dn, a, c, b, d):
     alpha = np.zeros(dn)
     beta = np.zeros(dn)
 
@@ -19,5 +19,5 @@ def sys_solve(dn, a, c, b, d):
 
     return y
 
-def i_calc(y, dx):
+def calculate_integral(y, dx):
     return dx/3 * (y[0] + 4 * np.sum(y[1:-1:2]) + 2 * np.sum(y[2:-1:2]) + y[-1])
