@@ -4,7 +4,7 @@ import numpy as np
 O = 0
 M = 0.2
 L = 1.6
-dn = 161
+dn = 16001
 x, dx = np.linspace(O, L, dn, retstep=True)
 
 # material constants (Germanium)
@@ -17,9 +17,9 @@ Nd, Na = 1e4, 1e2
 N = np.array(list(map(lambda x: Nd if x < M else -Na, x)))
 
 # built-in potential
-psi_bi = np.log(Nd * Na / (ni ** 2))
+psi_bi = np.log(Nd * Na / (ni**2))
 
 # border conditions
 n_o, n_l = Nd, 0
 p_o, p_l = 0, Na
-psi_o, psi_l = psi_bi - 22, 0
+psi_o, psi_l = 0, psi_bi
