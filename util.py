@@ -84,11 +84,11 @@ def calc_I(y, dx):
     return dx / 3 * (y[0] + 4 * np.sum(y[1:-1:2]) + 2 * np.sum(y[2:-1:2]) + y[-1])
 
 
-def plot(x, y, y_label):
+def plot(x, y, y_label, fname):
     plt.figure()
     plt.plot(x, y)
     plt.xlabel("x")
     plt.ylabel(y_label)
     plt.grid(True)
-    plt.show()
+    plt.savefig(fname)
     plt.close()
